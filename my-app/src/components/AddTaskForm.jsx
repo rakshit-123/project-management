@@ -17,26 +17,36 @@ const AddTaskForm = ({ onSubmit }) => (
     }}
   >
     {({ errors, touched }) => (
-      <Form className="flex flex-wrap gap-2 mb-4">
-        <Field
-          name="title"
-          placeholder="Task title"
-          className="border p-2 rounded w-full md:w-auto flex-1"
-        />
-        <Field as="select" name="status" className="border p-2 rounded">
-          <option value="todo">To Do</option>
-          <option value="inprogress">In Progress</option>
-          <option value="done">Done</option>
-        </Field>
-        <button
-          type="submit"
-          className="bg-green-600 text-white px-4 py-2 rounded"
-        >
-          Add Task
-        </button>
-        {errors.title && touched.title && (
-          <div className="text-red-500 text-sm">{errors.title}</div>
-        )}
+      <Form className="bg-white p-8 rounded-xl shadow-2xl border-2 border-[#17a2b8]">
+        <div className="flex flex-col md:flex-row items-start md:space-x-6 space-y-6 md:space-y-0">
+          <div className="flex-grow w-full">
+            <Field
+              name="title"
+              placeholder="Enter a new task title"
+              className="w-full px-6 py-4 border border-[#17a2b8] rounded-full focus:outline-none focus:ring-4 focus:ring-[#17a2b8] transition-shadow duration-300 text-lg"
+            />
+            {errors.title && touched.title && (
+              <div className="text-red-500 text-md mt-3 font-semibold">
+                {errors.title}
+              </div>
+            )}
+          </div>
+          <Field
+            as="select"
+            name="status"
+            className="w-full md:w-auto px-6 py-4 border border-[#17a2b8] rounded-full focus:outline-none focus:ring-4 focus:ring-[#17a2b8] transition-shadow duration-300 text-lg"
+          >
+            <option value="todo">To Do</option>
+            <option value="inprogress">In Progress</option>
+            <option value="done">Done</option>
+          </Field>
+          <button
+            type="submit"
+            className="w-full md:w-auto bg-white text-[#17a2b8] font-extrabold px-8 py-4 rounded-full hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-[#17a2b8] focus:ring-opacity-50 transition-colors duration-300 text-lg"
+          >
+            Add Task
+          </button>
+        </div>
       </Form>
     )}
   </Formik>

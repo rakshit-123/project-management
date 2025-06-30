@@ -19,33 +19,43 @@ const ProjectDetails = () => {
   }));
 
   return (
-    <div className="p-4 max-w-7xl mx-auto">
-      <h2 className="text-2xl font-semibold mb-4">Project Tasks</h2>
+    <div className="p-10 min-h-screen">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-5xl font-black text-[#17a2b8] mb-10 border-b-4 pb-6 border-[#17a2b8]">
+          Project Tasks
+        </h2>
 
-      <AddTaskForm
-        onSubmit={(data) =>
-          dispatch(addTask({ ...data, projectId: id, description: "" }))
-        }
-      />
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {["todo", "inprogress", "done"].map((status) => (
-          <TaskBoard
-            key={status}
-            status={status}
-            tasks={tasks.filter((t) => t.status === status)}
-            dispatch={dispatch}
+        <div className="mb-10">
+          <AddTaskForm
+            onSubmit={(data) =>
+              dispatch(addTask({ ...data, projectId: id, description: "" }))
+            }
           />
-        ))}
-      </div>
+        </div>
 
-      <h3 className="text-lg font-semibold mt-6">Task Distribution</h3>
-      <div className="mt-4">
-        <BarChart width={500} height={200} data={grouped}>
-          <XAxis dataKey="name" />
-          <YAxis allowDecimals={false} />
-          <Bar dataKey="count" fill="#60a5fa" />
-        </BarChart>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {["todo", "inprogress", "done"].map((status) => (
+            <TaskBoard
+              key={status}
+              status={status}
+              tasks={tasks.filter((t) => t.status === status)}
+              dispatch={dispatch}
+            />
+          ))}
+        </div>
+
+        <div className="mt-16 bg-white p-8 rounded-2xl shadow-2xl border-2 border-[#17a2b8]">
+          <h3 className="text-3xl font-extrabold text-[#17a2b8] mb-8">
+            Task Distribution
+          </h3>
+          <div className="flex justify-center">
+            <BarChart width={700} height={400} data={grouped}>
+              <XAxis dataKey="name" tick={{ fill: "#333" }} />
+              <YAxis allowDecimals={false} tick={{ fill: "#333" }} />
+              <Bar dataKey="count" fill="#17a2b8" />
+            </BarChart>
+          </div>
+        </div>
       </div>
     </div>
   );

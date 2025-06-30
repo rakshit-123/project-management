@@ -14,16 +14,18 @@ const TaskColumn = ({ status, tasks, onTaskDrop, projectId }) => {
   return (
     <div
       ref={drop}
-      className={`flex-1 bg-gray-100 p-4 rounded-xl shadow-inner transition-all ${
-        isOver ? "bg-blue-100" : ""
+      className={`flex-1 bg-white p-6 rounded-xl shadow-2xl border-2 border-[#17a2b8] transition-all duration-300 ease-in-out ${
+        isOver ? "bg-gray-100" : ""
       }`}
     >
-      <h3 className="text-xl font-bold mb-4 text-center text-blue-600">
+      <h3 className="text-3xl font-black mb-8 text-center text-white bg-[#17a2b8] p-4 rounded-t-xl">
         {status}
       </h3>
-      {tasks.map((task) => (
-        <TaskCard key={task.id} task={task} />
-      ))}
+      <div className="space-y-6">
+        {tasks.map((task) => (
+          <TaskCard key={task.id} task={task} />
+        ))}
+      </div>
     </div>
   );
 };
