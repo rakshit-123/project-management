@@ -1,0 +1,23 @@
+.dashboard {
+  position: relative;
+  background-color: rgb(204, 235, 255); /* fallback background */
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Add a background image layer with opacity */
+.dashboard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background-image: url("https://media.istockphoto.com/id/1465436152/photo/agile-software-development-or-project-management-using-kanban-or-scrum-methodology-boards-on.jpg?s=1024x1024&w=is&k=20&c=gHA2W0wbd5jDwErwV667S_lPrvbbbLc6uBHOPsYgwjw="); */
+  background-image: url("https://media.istockphoto.com/id/1423812541/vector/project-management-strategic-plan-to-manage-resources-for-development-working-process-and.jpg?s=612x612&w=0&k=20&c=F-9o0xJuAaR5KDxeDav00sAEwLIwPRgZXXCHXGjEnYA=");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5; /* Adjust the opacity as needed */
+  z-index: -1;
+}

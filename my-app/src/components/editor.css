@@ -1,4 +1,4 @@
-.editor-container {
+/* .editor-container {
   border: 1px solid #ddd;
   padding: 15px;
   border-radius: 10px;
@@ -55,4 +55,58 @@
 
 .editor-underline {
   text-decoration: underline;
+} */
+
+.editor-container {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 16px;
+  background-color: #fff;
+  margin-top: 10px;
+}
+
+.editor-input {
+  min-height: 120px;
+  padding: 10px;
+  outline: none;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Text formats */
+.editor-bold {
+  font-weight: bold;
+}
+
+.editor-italic {
+  font-style: italic;
+}
+
+/* Placeholder style */
+.editor-placeholder {
+  color: #888;
+  font-style: italic;
+  position: absolute;
+  pointer-events: none;
+}
+
+/* Toolbar styles */
+.toolbar {
+  margin-bottom: 10px;
+}
+
+.toolbar button {
+  margin-right: 8px;
+  padding: 6px 12px;
+  border: none;
+  background-color: #17a2b8;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.toolbar button:hover {
+  background-color: #138fa1;
 }

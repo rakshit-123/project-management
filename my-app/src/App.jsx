@@ -7,7 +7,7 @@ import Settings from "./pages/Settings";
 
 function App() {
   return (
-    <div className="min-h-screen bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
+    <div className="min-h-screen bg-white text-gray-900 dark:bg-gray-900 dark:text-white ">
       <Navbar />
       <Routes>
         <Route path="/" element={<Navigate to="/dashboard" />} />

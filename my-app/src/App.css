@@ -1,13 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+@import url("https://media.istockphoto.com/id/1530809392/photo/light-bulbs-with-project-management-concept.jpg?s=612x612&w=0&k=20&c=T9l3XycFrgG2iZEyXh5nGrZQsIODaQA0nK05NowLnI0=");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  font-family: "Poppins", sans-serif;
-  background-color: #e5a673; /* Lavender */
-  color: black;
+  /* font-family: "Poppins", sans-serif;
+  background-color: #e5a673;
+  color: black; */
+  background-color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 ::-webkit-scrollbar {

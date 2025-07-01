@@ -1,3 +1,4 @@
+import "./Dashboard.css";
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addProject, deleteProject } from "../redux/projectsSlice";
@@ -9,9 +10,9 @@ const Dashboard = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="p-10 min-h-screen">
+    <div className="p-10 min-h-screen dashboard">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-5xl font-black text-white mb-10 border-b-4 pb-6 border-white">
+        <h1 className="text-5xl font-black text-white mb-10  pb-6">
           Project Dashboard
         </h1>
         <div className="mb-10">

@@ -4,14 +4,12 @@ const initialState = [
   {
     id: "101",
     projectId: "1",
-    title: "Create wireframes",
     status: "todo",
     description: "",
   },
   {
     id: "102",
     projectId: "1",
-    title: "Setup Tailwind",
     status: "inprogress",
     description: "",
   },

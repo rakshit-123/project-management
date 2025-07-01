@@ -10,7 +10,7 @@ const TaskBoard = ({ status, tasks, dispatch }) => {
   });
 
   return (
-    <div ref={drop} className="bg-gray-100 rounded p-4 min-h-[300px]">
+    <div ref={drop} className="bg-gray-100 rounded p-4 min-h-[200px]">
       <h3 className="font-bold capitalize mb-3">
         {status.replace(/([a-z])([A-Z])/g, "$1 $2")}
       </h3>
